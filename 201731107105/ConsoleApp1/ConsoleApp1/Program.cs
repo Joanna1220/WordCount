@@ -161,8 +161,8 @@ namespace ConsoleApp1
 
         static void Main()
             {
-                string filePath = @"D:\\201731107105\\input.txt";
-                string newfilePath = @"D:\\201731107105\\output.txt";
+                string filePath = @"D:\\3105\\input.txt";
+                string newfilePath = @"D:\\3105\\output.txt";
                 StreamWriter sw = new StreamWriter(newfilePath,false, Encoding.Default);//false是覆盖已存在的文件
                 WordCounter w = new WordCounter();
                 sw.WriteLine("characters:{0}", w.CountChar(filePath));
