@@ -10,10 +10,10 @@ using System.Collections;
 
 namespace ConsoleApp1
 {
-    class WordCounter
+    public class WordCounter
     {
         //判断文本字符数
-        static int CountChar(string filePath)
+        public int CountChar(string filePath)
         {
             int count = 0;
             try
@@ -47,7 +47,7 @@ namespace ConsoleApp1
 
         
         //统计行数
-        public static int CountLines(string filepath)
+        public  int CountLines(string filepath)
         {
             int lines = 0;
             FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
@@ -69,7 +69,7 @@ namespace ConsoleApp1
 
 
         //统计每个单词的频率并按降序排列
-        static Dictionary<string, int> WordFrequency(string filePath)
+        public Dictionary<string, int> WordFrequency(string filePath)
 
         {
             string str;
@@ -140,7 +140,7 @@ namespace ConsoleApp1
 
         }
 
-        static int CountWords(string filePath)
+        public int CountWords(string filePath)
         {
             Dictionary<string, int> dictionary = WordFrequency(filePath);
 
@@ -164,11 +164,11 @@ namespace ConsoleApp1
                 string filePath = @"D:\\201731107105\\input.txt";
                 string newfilePath = @"D:\\201731107105\\output.txt";
                 StreamWriter sw = new StreamWriter(newfilePath,false, Encoding.Default);//false是覆盖已存在的文件
-            
-                sw.WriteLine("characters:{0}", CountChar(filePath));
-                sw.WriteLine("lines:{0}", CountLines(filePath));
-                sw.WriteLine("Words:{0}", CountWords(filePath));
-                Dictionary<string, int> a = WordFrequency(filePath);
+                WordCounter w = new WordCounter();
+                sw.WriteLine("characters:{0}", w.CountChar(filePath));
+                sw.WriteLine("lines:{0}", w.CountLines(filePath));
+                sw.WriteLine("Words:{0}", w.CountWords(filePath));
+                Dictionary<string, int> a = w.WordFrequency(filePath);
                 int temp = 1;
                 
                 
