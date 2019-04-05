@@ -44,8 +44,11 @@ namespace ConsoleApp1
             }
             return 0;
         }
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> a0bd7af6b11afb6914169e921435fe3b715dce6c
         //统计行数
         public static int CountLines(string filepath)
         {
@@ -68,6 +71,7 @@ namespace ConsoleApp1
         }
 
 
+<<<<<<< HEAD
         //统计每个单词的频率并按降序排列
         static Dictionary<string, int> WordFrequency(string filePath)
 
@@ -143,12 +147,19 @@ namespace ConsoleApp1
         
 
             static void Main()
+=======
+
+
+
+        static void Main()
+>>>>>>> a0bd7af6b11afb6914169e921435fe3b715dce6c
             {
                 string filePath = @"D:\\201731107105\\input.txt";
                 string newfilePath = @"D:\\201731107105\\output.txt";
                 StreamWriter sw = new StreamWriter(newfilePath,false, Encoding.Default);//false是覆盖已存在的文件
             
                 sw.WriteLine("characters:{0}", CountChar(filePath));
+<<<<<<< HEAD
                 sw.WriteLine("lines:{0}", CountLines(filePath));
                 
                 Dictionary<string, int> a = WordFrequency(filePath);
@@ -167,6 +178,9 @@ namespace ConsoleApp1
                 }
                
 
+=======
+                sw.WriteLine("Words:{0}", CountLines(filePath));
+>>>>>>> a0bd7af6b11afb6914169e921435fe3b715dce6c
                 sw.Flush();
                 sw.Close();
 
