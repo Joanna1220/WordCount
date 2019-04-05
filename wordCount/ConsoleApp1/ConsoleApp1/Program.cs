@@ -44,19 +44,39 @@ namespace ConsoleApp1
             }
             return 0;
         }
+        //统计行数
+        public static int CountLines(string filepath)
+        {
+            int lines = 0;
+            FileStream fs = new FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            StreamReader sr = new StreamReader(fs);
+            while (sr.ReadLine() != null)
+            {
 
-        
-        
+                //if (sr.ReadLine() != "") 
+                lines++;
+                //else sr.ReadLine();
+            }
+
+            fs.Close();
 
 
-            static void Main()
+            return lines;
+
+        }
+
+
+
+
+
+        static void Main()
             {
                 string filePath = @"D:\\201731107105\\input.txt";
                 string newfilePath = @"D:\\201731107105\\output.txt";
                 StreamWriter sw = new StreamWriter(newfilePath,false, Encoding.Default);//false是覆盖已存在的文件
             
                 sw.WriteLine("characters:{0}", CountChar(filePath));
-                
+                sw.WriteLine("Words:{0}", CountLines(filePath));
                 sw.Flush();
                 sw.Close();
 
