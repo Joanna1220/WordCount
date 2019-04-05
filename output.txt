@@ -1,6 +1,6 @@
 characters:95340
-<<<<<<< HEAD
 lines:847
+Words:8898
 that:319
 little:285
 prince:202
@@ -11,6 +11,3 @@ this:95
 with:94
 what:86
 will:81
-=======
-Words:847
->>>>>>> a0bd7af6b11afb6914169e921435fe3b715dce6c
