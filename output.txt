@@ -1,0 +1,13 @@
+characters:95340
+lines:847
+Words:8898
+that:319
+little:285
+prince:202
+said:196
+have:145
+they:98
+this:95
+with:94
+what:86
+will:81
