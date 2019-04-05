@@ -1,6 +1,5 @@
 characters:95340
 lines:847
-Words:8898
 that:319
 little:285
 prince:202
